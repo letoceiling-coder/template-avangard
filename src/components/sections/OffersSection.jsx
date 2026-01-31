@@ -58,17 +58,17 @@ const OffersSection = () => {
   ]
 
   return (
-    <section className="w-full bg-white py-10 lg:py-14">
+    <section className="w-full bg-white py-8 lg:py-12">
       <div className="max-w-[1200px] mx-auto px-4">
-        {/* Заголовок */}
-        <h2 className="text-dark text-[32px] lg:text-[44px] font-rubik font-bold mb-8 lg:mb-10">
+        {/* Заголовок (требование п.2.1) */}
+        <h2 className="text-dark text-[28px] lg:text-[36px] font-rubik font-semibold mb-6 lg:mb-8">
           Новые объявления
         </h2>
 
-        {/* Контейнер с карточками и баннером */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-5">
+        {/* Контейнер с карточками и баннером (требование п.1.1, п.1.2) */}
+        <div className="flex flex-col lg:flex-row gap-5">
           {/* Левая часть: 6 карточек в 3 колонки */}
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-5">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {properties.map((property, index) => (
               <PropertyCard
                 key={index}
@@ -81,34 +81,34 @@ const OffersSection = () => {
             ))}
           </div>
 
-          {/* Правая часть: Баннер */}
-          <div className="lg:w-[340px] flex-shrink-0">
-            <div className="relative bg-primary rounded-[20px] overflow-hidden shadow-2xl h-full">
-              <div className="h-full flex flex-col justify-between p-8 lg:p-10">
+          {/* Правая часть: Промо-карта (требование п.4) */}
+          <div className="lg:w-[360px] flex-shrink-0">
+            <div className="relative bg-primary rounded-[16px] overflow-hidden shadow-xl h-full">
+              <div className="h-full flex flex-col justify-between p-6 lg:p-7">
                 {/* Текст и кнопка */}
-                <div className="space-y-6">
-                  <h3 className="text-white text-[36px] lg:text-[48px] font-rubik font-bold leading-tight">
+                <div className="space-y-5">
+                  <h3 className="text-white text-[32px] lg:text-[40px] font-rubik font-bold leading-tight">
                     100 000 +<br />объектов
                   </h3>
-                  <p className="text-white text-[15px] lg:text-[16px] font-rubik font-normal leading-relaxed opacity-90">
+                  <p className="text-white text-[14px] font-rubik font-normal leading-relaxed opacity-90">
                     Еще больше объектов<br />
                     недвижимости в нашем каталоге
                   </p>
                   <Button 
                     variant="secondary" 
-                    size="lg"
-                    className="bg-white text-dark hover:bg-gray-50 hover:scale-105 border-white"
+                    size="md"
+                    className="bg-white text-dark hover:bg-gray-50 hover:scale-[1.02] border-white shadow-lg"
                   >
                     Перейти в каталог
                   </Button>
                 </div>
 
-                {/* Изображение внизу */}
-                <div className="hidden lg:block mt-6">
+                {/* Изображение внизу (требование п.4.2.4) */}
+                <div className="hidden lg:block mt-4">
                   <img
                     src={bannerImage}
                     alt="Каталог недвижимости"
-                    className="w-full h-[180px] object-cover rounded-[12px]"
+                    className="w-full h-[140px] object-cover object-bottom rounded-[8px]"
                   />
                 </div>
               </div>
